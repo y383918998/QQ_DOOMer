@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS 1//VS IDE 2019 消除scanf函数不安全警告
+
+#include<stdio.h>
+#include<Windows.h>
+
+int main()
+{
+		int times;
+		char name[100];
+//请先复制你想要轰炸的信息，可以为图片；
+		printf("input the name which u want to doom：");                  //请先打开QQ窗口，再输入轰炸ID
+		scanf("%s", &name,40);
+		printf("Please enter the number of bombing messages sent：");    //轰炸的次数
+		scanf("%d", &i);
+		HWND H = FindWindow(0, name);                                   //找到对话框
+		while (i-- > 0)
+		{
+			SendMessage(H, WM_PASTE, 0, 0);                               //粘贴所复制的内容
+			SendMessage(H, WM_KEYDOWN, VK_RETURN, 0);                     //按下回车
+			Sleep(2000);                                                  //休眠，防止检测
+		}
+}
+
+//create by xinyang
+//26/01/2021
